@@ -9,6 +9,7 @@ public class Student {
     char letterGrade;
     String isPassing;
     static int totalPassing = 0;
+    static int totalStudents = 0;
 
     public Student(String Name, int Age, String Course, double Grade1, double Grade2, double Grade3) {
         name = Name;
@@ -17,6 +18,7 @@ public class Student {
         grade1 = Grade1;
         grade2 = Grade2;
         grade3 = Grade3;
+        totalStudents++;
         displayInfo();
         System.out.println(" ");
     }
@@ -64,6 +66,6 @@ public class Student {
         Student student1 = new Student("Michael", 20, "BSIT", 75.0, 80.0, 90.0);
         Student student2 = new Student("Adam", 19, "BSA", 90.0, 85.0, 95.0);
         Student student3 = new Student("John", 21, "BSCE", 70.0, 70.0, 65.0);
-        System.out.println("Summary: " + totalPassing + " out of 3 students are passing.");
+        System.out.println("Summary: " + totalPassing + " out of " + totalStudents + " students are passing.");
     }
 }
