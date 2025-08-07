@@ -8,6 +8,7 @@ public class Student {
     double average;
     char letterGrade;
     String isPassing;
+    static int totalPassing = 0;
 
     public Student(String Name, int Age, String Course, double Grade1, double Grade2, double Grade3) {
         name = Name;
@@ -51,6 +52,7 @@ public class Student {
     public void isPassing() {
         if (average >= 70) {
             isPassing = "PASSING";
+            totalPassing++;
         } else {
             isPassing = "FAILING";
         }
@@ -62,6 +64,6 @@ public class Student {
         Student student1 = new Student("Michael", 20, "BSIT", 75.0, 80.0, 90.0);
         Student student2 = new Student("Adam", 19, "BSA", 90.0, 85.0, 95.0);
         Student student3 = new Student("John", 21, "BSCE", 70.0, 70.0, 65.0);
-        System.out.println("Summary: 2 out of 3 students are passing.");
+        System.out.println("Summary: " + totalPassing + " out of 3 students are passing.");
     }
 }
