@@ -18,7 +18,7 @@ public class Student {
         grade2 = Grade2;
         grade3 = Grade3;
         displayInfo();
-
+        System.out.println(" ");
     }
 
     public void displayInfo() {
