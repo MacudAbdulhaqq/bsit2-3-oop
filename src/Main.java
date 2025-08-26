@@ -1,9 +1,13 @@
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
     public static void main(String[] args) {
-        //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
-        // to see how IntelliJ IDEA suggests fixing it.
-        System.out.println("Test Branch");
+        PostManager pm = new PostManager();
+        System.out.println("===Social Media Post Manager===");
+        pm.displayPostStats("Java Programming Tips",
+                pm.calculateEngagement(150,75,25),
+                pm.getCategoryRating(pm.calculateEngagement(150,75,25)));
+        System.out.println(" ");
+        pm.manageHashtags(new String[]{"#java", "#coding", "#programming", "#java", "#tips"});
+        pm.findTrendingPosts();
+        pm.getUniqueAuthors("Alice", "Bob", "Alice", "Charlie", "Bob");
     }
 }
