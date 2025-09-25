@@ -35,82 +35,16 @@ public class PetService{
         Dog dog = new Dog("Buddy", 3);
         Cat cat = new Cat("Whiskers", 2);
         Bird bird = new Bird("Tweety", 1);
+
         System.out.println("Welcome to the Pet Clinic!");
         System.out.println("==========================");
         dog.displayInfo();
-        System.out.println(" ");
         cat.displayInfo();
-        System.out.println(" ");
         bird.displayInfo();
-        System.out.println(" ");
 
         System.out.println("Training Session Started!");
         System.out.println("=========================");
         dog.performTrick();
         bird.performTrick();
-    }
-}
-
-abstract class Pet {
-    protected String name;
-    protected int age;
-
-    public Pet(String name, int age) {
-        this.name = name;
-        this.age = age;
-    }
-
-    public abstract String makeSound();
-
-    public void displayInfo() {
-        System.out.println("Pet Name: " + name + ", Age: " + age);
-        System.out.println(name + " says: " + makeSound());
-    }
-}
-
-interface Trainable{
-    void performTrick();
-}
-
-class Dog extends Pet implements Trainable{
-    public Dog(String name, int age){
-        super(name, age);
-    }
-
-    @Override
-    public String makeSound(){
-        return "Woof! Woof!";
-    }
-
-    @Override
-    public void performTrick(){
-        System.out.println("Training " + name + ": Sits and shakes hands");
-    }
-}
-
-class Cat extends Pet {
-    public Cat(String name, int age) {
-        super(name, age);
-    }
-
-    @Override
-    public String makeSound() {
-        return "Meow! Meow!";
-    }
-}
-
-class Bird extends Pet implements Trainable{
-    public Bird(String name, int age) {
-        super(name, age);
-    }
-
-    @Override
-    public String makeSound() {
-        return "Tweet! Tweet!";
-    }
-
-    @Override
-    public void performTrick(){
-        System.out.println("Training " + name + ": Flies in circles and lands on perch");
     }
 }
